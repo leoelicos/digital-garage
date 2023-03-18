@@ -1,6 +1,29 @@
-import { ADD_CAR, START_CAR, STOP_CAR } from '../utils/actions.js'
+import { ADD_CAR, START_CAR, STOP_CAR } from '../utils/actions'
 
-export default function reducer(state, action) {
+const randomNum = () => Math.floor(Math.random() * 20000)
+
+// Notice we moved the initial state object from our CarComponent to the reducer itself
+const initalState = {
+  cars: [
+    {
+      id: randomNum(),
+      make: 'Honda',
+      model: 'Civic',
+      year: '2008',
+      isRunning: false
+    },
+    {
+      id: randomNum(),
+      make: 'Tesla',
+      model: 'Y',
+      year: '2021',
+      isRunning: false
+    }
+  ]
+}
+
+// Here we pass a default value of initalState if none is provided
+export default function reducer(state = initalState, action) {
   switch (action.type) {
     case ADD_CAR: {
       const newCarId = state.cars[state.cars.length - 1].id + 1
