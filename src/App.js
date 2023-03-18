@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import CarComponent from './components/CarComponent';
+import React, { useEffect } from 'react'
+import CarComponent from './components/CarComponent.js'
 // Importing our theme provider which will make our global state available to child components
-import CarProvider from './utils/CarContext';
+import CarProvider from './utils/CarContext.js'
 
 export default function App() {
   useEffect(() => {
-    document.title = 'Digital Garage';
-  }, []);
+    document.title = 'Digital Garage'
+  }, [])
 
   return (
     <CarProvider>
       <CarComponent />
     </CarProvider>
-  );
+  )
 }
