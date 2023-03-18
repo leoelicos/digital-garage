@@ -1,4 +1,4 @@
-import { ADD_CAR, START_CAR, STOP_CAR } from '../utils/actions'
+import { ADD_CAR, START_CAR, STOP_CAR } from '../utils/actions.js'
 
 const randomNum = () => Math.floor(Math.random() * 20000)
 
