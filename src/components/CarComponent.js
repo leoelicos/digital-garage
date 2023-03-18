@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { START_CAR, STOP_CAR, ADD_CAR } from '../utils/actions'
+import { START_CAR, STOP_CAR, ADD_CAR } from '../utils/actions.js'
 
 export default function CarComponent() {
   const dispatch = useDispatch()
