@@ -1,11 +1,10 @@
-import React, { useReducer, useState } from 'react'
-import { useCar } from '../utils/CarContext.js'
-import reducer from '../utils/reducers.js'
-import { START_CAR, STOP_CAR, ADD_CAR } from '../utils/actions.js'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { START_CAR, STOP_CAR, ADD_CAR } from '../utils/actions'
 
 export default function CarComponent() {
-  const initialState = useCar()
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const dispatch = useDispatch()
+  const state = useSelector((state) => state)
 
   const [newCarMake, setNewCarMake] = useState('')
   const [newCarModel, setNewCarModel] = useState('')
@@ -53,6 +52,7 @@ export default function CarComponent() {
         </div>
       </section>
       <section className='car-list'>
+        {console.log(state)}
         {state.cars.map((car) => (
           <div
             key={car.id}
@@ -64,7 +64,10 @@ export default function CarComponent() {
             </h4>
             <div className='card-body bg-light p-2'>
               <p>{car.make}</p>
-              <code>Car ID: {car.id}</code>
+              <code>
+                Car ID:
+                {car.id}
+              </code>
             </div>
             <span style={{ fontSize: '1rem' }}>
               {car.isRunning ? 'Car is running 🏎️' : 'Car is off 💤'}
