@@ -12,7 +12,7 @@ export default function CarComponent() {
 
   return (
     <>
-      <h1>Digital Garage</h1>
+      <h1>vroom</h1>
       <section className='car-input'>
         <div>
           <div className='add-car'>

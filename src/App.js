@@ -5,7 +5,7 @@ import CarProvider from './utils/CarContext.js'
 
 export default function App() {
   useEffect(() => {
-    document.title = 'Digital Garage'
+    document.title = 'Vroom'
   }, [])
 
   return (
