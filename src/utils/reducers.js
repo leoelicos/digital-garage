@@ -15,7 +15,7 @@ const initalState = {
     {
       id: randomNum(),
       make: 'Tesla',
-      model: 'Y',
+      model: 'Model Y',
       year: '2021',
       isRunning: false
     }
