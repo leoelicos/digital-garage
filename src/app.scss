@@ -1,0 +1,60 @@
+.vroom {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    height: 10vh;
+
+    padding: 0 3px;
+
+    .logo {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+    h1 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: red;
+    }
+  }
+
+  section.car-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    .card {
+      background-color: rgb(0, 0, 0);
+      border: 1px solid white;
+      border-radius: 1rem;
+      flex-basis: 100%;
+
+      @media screen and (min-width: 576px) {
+        flex-basis: calc(50% - 1rem);
+      }
+
+      @media screen and (min-width: 1050px) {
+        flex-basis: calc(25% - 3rem);
+      }
+
+      h4 {
+        background-color: transparent !important;
+      }
+      div.make {
+        color: gray;
+        padding: 3px;
+      }
+      div.id {
+        padding: 3px;
+        background-color: silver !important;
+      }
+    }
+  }
+}
