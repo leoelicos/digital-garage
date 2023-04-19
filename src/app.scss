@@ -1,4 +1,9 @@
 .vroom {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+
   header {
     display: flex;
     justify-content: space-between;
@@ -20,7 +25,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      color: red;
+      color: white;
     }
   }
 
@@ -31,8 +36,8 @@
     gap: 1rem;
 
     .card {
-      background-color: rgb(0, 0, 0);
-      border: 1px solid white;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(0, 0, 0);
       border-radius: 1rem;
       flex-basis: 100%;
 
@@ -45,14 +50,21 @@
       }
 
       h4 {
-        background-color: transparent !important;
+        padding: 1vh 1vw;
+        margin: 0;
+
+        .minicar {
+          display: inline-block;
+          background-color: orange;
+          padding: 1vmin;
+          border-radius: 50%;
+          margin-right: 1vw;
+          font-size: max(32px, 8vmin);
+        }
       }
-      div.make {
-        color: gray;
-        padding: 3px;
-      }
+
       div.id {
-        padding: 3px;
+        padding: 1vh 1vw;
         background-color: silver !important;
       }
     }
