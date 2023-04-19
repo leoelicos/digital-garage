@@ -58,12 +58,11 @@ export default function CarComponent() {
           <div
             key={car.id}
             id={car.id}
-            className='card mb-3'>
-            <h4 className='card-header bg-primary text-light p-2 m-0'>
-              {car.model}&nbsp;{car.year} {car.isRunning ? '🏎️' : '💤'}
-              <br />
+            className='card'>
+            <h4>
+              <div className='minicar'>{car.isRunning ? '🏎️' : '💤'}</div>
+              {car.make}&nbsp;{car.model}&nbsp;{car.year}
             </h4>
-            <div class='make'>{car.make}</div>
             <div className='id'>ID:&nbsp;{car.id}</div>
             <span style={{ fontSize: '1rem' }}>
               <Button
